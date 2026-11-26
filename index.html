@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover independent cafes, local coffee, and comfortable workspaces with BrewMap.">
+  <title>BrewMap — Find Your Next Coffee Spot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="BrewMap home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><path d="M10 15h20v8.5A9.5 9.5 0 0 1 20.5 33h-1A9.5 9.5 0 0 1 10 23.5V15Z"/><path d="M30 18h2.5a4.5 4.5 0 0 1 0 9H30"/><path d="M15 10c0-2 2-2 2-4M22 10c0-2 2-2 2-4"/></svg>
+      </span>
+      <span>BrewMap</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="index.html#discover">Discover</a>
+      <a href="cafes.html">Cafes</a>
+      <a href="index.html#collections">Collections</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="avatar" type="button" aria-label="Open profile">JD</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="discover">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR CITY, YOUR COFFEE</p>
+        <h1>Find a cafe that<br><em>feels like you.</em></h1>
+        <p class="hero-description">Discover neighborhood gems, hidden workspaces, and the perfect cup—one map at a time.</p>
+        <form class="search-panel" id="searchForm">
+          <label class="search-field">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            <span class="sr-only">Search</span>
+            <input id="searchInput" type="search" placeholder="Cafe, neighborhood, or coffee" autocomplete="off">
+          </label>
+          <button type="submit" class="search-button">Explore cafes</button>
+        </form>
+      </div>
+      <div class="hero-visual" aria-label="A cozy cafe interior">
+        <div class="visual-frame">
+          <img src="images/hero-cafe.webp" alt="Warm and cozy independent cafe interior" fetchpriority="high" decoding="async">
+        </div>
+        <aside class="floating-card" aria-label="Featured cafe">
+          <img src="images/daily-grind.webp" alt="Coffee served at The Daily Grind" decoding="async">
+          <div>
+            <span class="card-label">NEAR YOU</span>
+            <strong>The Daily Grind</strong>
+            <span class="rating">★ 4.8 <span>(324)</span></span>
+          </div>
+          <button type="button" aria-label="Save The Daily Grind">♡</button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="collections" id="collections">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CURATED FOR YOU</p>
+          <h2>Explore by mood</h2>
+        </div>
+        <div class="carousel-controls">
+          <button id="prevCollection" type="button" aria-label="Previous collections">←</button>
+          <button id="nextCollection" type="button" aria-label="Next collections">→</button>
+        </div>
+      </div>
+      <div class="collection-grid" id="collectionGrid">
+        <button class="collection-card" type="button" data-filter="work">
+          <img src="images/work-focus.webp" alt="Bright cafe workspace" loading="lazy" decoding="async">
+          <span><strong>Work &amp; Focus</strong><small>18 quiet spots</small></span>
+        </button>
+        <button class="collection-card" type="button" data-filter="date">
+          <img src="images/coffee-dates.webp" alt="Romantic cafe table" loading="lazy" decoding="async">
+          <span><strong>Coffee Dates</strong><small>12 cozy picks</small></span>
+        </button>
+        <button class="collection-card" type="button" data-filter="pastry">
+          <img src="images/fresh-pastries.webp" alt="Fresh pastries" loading="lazy" decoding="async">
+          <span><strong>Fresh Pastries</strong><small>24 bakeries</small></span>
+        </button>
+        <button class="collection-card" type="button" data-filter="specialty">
+          <img src="images/specialty-coffee.webp" alt="Coffee beans and brew" loading="lazy" decoding="async">
+          <span><strong>Specialty Coffee</strong><small>31 local roasters</small></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="nearby" id="nearby">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">HAND-PICKED NEARBY</p>
+          <h2>Popular around you</h2>
+        </div>
+        <a class="text-button" href="cafes.html">View all <span>→</span></a>
+      </div>
+      <div class="cafe-grid" id="cafeGrid">
+        <article class="cafe-card" data-name="Northline Coffee" data-tags="specialty work">
+          <div class="cafe-image">
+            <img src="images/northline-coffee.webp" alt="Northline Coffee cafe" loading="lazy" decoding="async">
+            <span class="open-badge">Open</span>
+            <button class="save-button" type="button" aria-label="Save Northline Coffee">♡</button>
+          </div>
+          <div class="cafe-content">
+            <div><h3>Northline Coffee</h3><span class="rating">★ 4.9</span></div>
+            <p>Specialty coffee · 0.8 mi</p>
+            <div class="tags"><span>Wi-Fi</span><span>Outdoors</span></div>
+          </div>
+        </article>
+        <article class="cafe-card" data-name="Fern &amp; Flour" data-tags="pastry date">
+          <div class="cafe-image">
+            <img src="images/fern-flour.webp" alt="Fern and Flour cafe" loading="lazy" decoding="async">
+            <span class="open-badge">Open</span>
+            <button class="save-button" type="button" aria-label="Save Fern and Flour">♡</button>
+          </div>
+          <div class="cafe-content">
+            <div><h3>Fern &amp; Flour</h3><span class="rating">★ 4.7</span></div>
+            <p>Bakery cafe · 1.2 mi</p>
+            <div class="tags"><span>Pastries</span><span>Cozy</span></div>
+          </div>
+        </article>
+        <article class="cafe-card" data-name="The Study Room" data-tags="work specialty">
+          <div class="cafe-image">
+            <img src="images/study-room.webp" alt="The Study Room cafe" loading="lazy" decoding="async">
+            <span class="open-badge closed">Closes 6pm</span>
+            <button class="save-button" type="button" aria-label="Save The Study Room">♡</button>
+          </div>
+          <div class="cafe-content">
+            <div><h3>The Study Room</h3><span class="rating">★ 4.8</span></div>
+            <p>Work cafe · 1.6 mi</p>
+            <div class="tags"><span>Quiet</span><span>Wi-Fi</span></div>
+          </div>
+        </article>
+      </div>
+      <p class="no-results" id="noResults" hidden>No cafes match your search. Try another name or mood.</p>
+    </section>
+  </main>
+
+  <footer id="about">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="#discover"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10 15h20v8.5A9.5 9.5 0 0 1 20.5 33h-1A9.5 9.5 0 0 1 10 23.5V15Z"/><path d="M30 18h2.5a4.5 4.5 0 0 1 0 9H30"/><path d="M15 10c0-2 2-2 2-4M22 10c0-2 2-2 2-4"/></svg></span><span>BrewMap</span></a>
+        <p>Good coffee is closer than you think.</p>
+        <div class="social-links" aria-label="Follow BrewMap">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="icon-dot" cx="18" cy="6" r="1"/></svg>
+          </a>
+          <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path class="pinterest-mark" d="M12 2a10 10 0 0 0-3.64 19.31c-.09-.82-.17-2.08.04-2.98l1.28-5.43s-.33-.66-.33-1.64c0-1.54.89-2.69 2-2.69.94 0 1.39.71 1.39 1.56 0 .95-.6 2.37-.91 3.69-.26 1.1.55 2 1.63 2 1.96 0 3.47-2.07 3.47-5.05 0-2.64-1.9-4.48-4.61-4.48-3.14 0-4.99 2.36-4.99 4.79 0 .95.36 1.97.81 2.52.09.11.1.21.08.33l-.3 1.22c-.05.2-.16.24-.37.15-1.38-.64-2.24-2.66-2.24-4.28 0-3.49 2.54-6.7 7.33-6.7 3.85 0 6.84 2.75 6.84 6.42 0 3.83-2.41 6.91-5.75 6.91-1.12 0-2.17-.58-2.53-1.27l-.69 2.64c-.25.96-.92 2.16-1.37 2.89A10 10 0 1 0 12 2Z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path class="facebook-mark" d="M13.5 21v-8.2h2.76l.41-3.2H13.5V7.56c0-.93.26-1.56 1.59-1.56h1.7V3.14A22.6 22.6 0 0 0 14.31 3c-2.46 0-4.14 1.5-4.14 4.25V9.6H7.4v3.2h2.77V21h3.33Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Quick links">
+        <h2>Quick links</h2>
+        <a href="cafes.html">Browse cafes</a>
+        <a href="index.html#collections">Explore collections</a>
+        <a href="about.html">About BrewMap</a>
+        <a href="contact.html">Contact us</a>
+      </nav>
+    </div>
+    <div class="footer-bottom"><span>© 2026 BrewMap. All rights reserved.</span><a href="index.html#discover">Back to top ↑</a></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
